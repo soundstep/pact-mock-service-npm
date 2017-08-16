@@ -57,7 +57,7 @@
     "build": "./scripts/clean.sh && ./scripts/build.sh",
     "link": "npm link ./build/pact-mock-service-darwin/ && npm link ./build/pact-mock-service-win32/ && npm link ./build/pact-mock-service-linux-ia32/ && npm link ./build/pact-mock-service-linux-x64/",
     "unlink": "npm unlink ./build/pact-mock-service-darwin/ && npm unlink ./build/pact-mock-service-win32/ && npm unlink ./build/pact-mock-service-linux-ia32/ && npm unlink ./build/pact-mock-service-linux-x64/",
-    "postinstall": "node ./src/check-dependencies.js",
+    "postinstall": "node -v && node ./src/check-dependencies.js",
     "test": "./node_modules/.bin/mocha -R spec ./index.spec.js src/**/*.spec.js",
     "watch": "./node_modules/.bin/nodemon -e js -x npm test",
     "prepublish": "npm test",
